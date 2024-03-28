@@ -1,0 +1,16 @@
+#BSUB -J Fam-simulation-300-Scenario-1
+#BSUB -W 240:00
+#BSUB -o /rsrch3/home/bcb/hnnguyen4/Fam-simulation-300-sensitivity/Scenario-1/log/sim_1.out
+#BSUB -e /rsrch3/home/bcb/hnnguyen4/Fam-simulation-300-sensitivity/Scenario-1/log/sim_1.err
+#BSUB -cwd /rsrch3/home/bcb/hnnguyen4/Fam-simulation-300-sensitivity/Scenario-1
+#BSUB -q long
+#BSUB -u hnnguyen4@mdanderson.org
+#BSUB -B
+#BSUB -N
+#BSUB -n 25
+#BSUB -M 96
+#BSUB -R rusage[mem=96]
+
+module load R
+Rscript sim_1.R
+
